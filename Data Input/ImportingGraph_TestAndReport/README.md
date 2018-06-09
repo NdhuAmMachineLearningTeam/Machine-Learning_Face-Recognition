@@ -10,7 +10,8 @@
 </li>
 <li>
 <strong>os </strong>在這邊是被我用來讀取檔案，<code>os.listdir</code>可以直接抓到一個資料夾內所有的檔案名稱<p>
-不過這次Face database每個人的相片都是15張且命名有條序，所以用for迴圈控制名稱來讀入也OK，不一定要使用。
+不過這次Face database每個人的相片都是15張且命名有條序，所以用for迴圈控制名稱來讀入也OK，不一定要使用。<p>
+更正 - Face database是已經從15張裡面抽掉了2張作測試資料，而抽掉的編號是隨機的，所以用os讀入為佳。
 </li>
 <li>
 <strong>cv2 </strong>，即OpenCV2.0，可以幫助我們對圖像進行一些幾何變換(Geometric Transformation)，而等等要使用到的是伸縮的部分(Scaling)，
