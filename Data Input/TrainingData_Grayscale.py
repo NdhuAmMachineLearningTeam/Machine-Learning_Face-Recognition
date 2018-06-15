@@ -14,7 +14,8 @@ for file in os.listdir(PATH):
     y_train.append(label)
     
 for i in range(650):
-    X_train[i] = cv2.resize(X_train[i],(213,311),interpolation=cv2.INTER_CUBIC)
+    tem = cv2.resize(X_train[i],(213,311),interpolation=cv2.INTER_CUBIC)
+    X_train[i] = tem.reshape(-1)
     
 X_train = np.array(X_train)
 y_train = np.array(y_train)
