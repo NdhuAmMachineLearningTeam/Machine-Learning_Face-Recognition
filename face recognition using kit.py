@@ -4,7 +4,7 @@ import matplotlib.image as mpimg
 import os
 import cv2
 from sklearn.decomposition import PCA
-from sklearn.neural_network import MLPClassifier
+from sklearn.svm import SVC
 
 PATH = "C:/Users/Mr-Fish/Desktop/Face/"
 PATH2 = "C:/Users/Mr-Fish/Desktop/test/"
@@ -41,7 +41,7 @@ pca = PCA(n_components=0.97 , svd_solver='full')
 newX_train = pca.fit_transform(X_train)
 newX_test = pca.transform(X_test)
 
-clf = MLPClassifier(hidden_layer_sizes=(10000))
+clf = SVC(kernel = 'linear')
 clf.fit(newX_train, y_train)
 print(np.mean(clf.predict(newX_train) == y_train))
 print(np.mean(clf.predict(newX_test) == y_test))
