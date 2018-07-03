@@ -1,5 +1,17 @@
 
 410411325_林皓翔, 410411239_陳宇凱, 410411245_陳本預
+<p>　　</p>
+<ul>
+<li>face recognition using kit.py　是這次人臉辨識專案的程式碼</li>
+<li>Acceptance_program_2018_06_26.py　是成果驗收時使用的程式碼</li>
+<li>face_recognition_by_eigenfaces.py　這份辨識程式碼有PCA的實作</li>
+<li>Machine Learning Face Recognition.ipynb　與這份README內容差不多，是用Jupyter Notebook完成的原型</li>
+<li>Data Input　資料夾內有跟讀檔相關的附程式及開發過程的紀錄報告</li>
+<li>Photo Gallery　資料夾則存放了Markdown檔要用的圖片和這次人臉辨識的資料集</li>
+<li>Development process _ ipynb record　則是為了方便檢視運行結果，對應主程式的開發保存Jupyter Notebook的資料夾</li>
+<li>Dimension Reduction和Training資料夾目前是空的，有機會implement的話再放東西進去</li>
+</ul>
+<p>　　</p>
 
 # Machine Learning  Face Recognition
 
@@ -29,7 +41,7 @@ from sklearn.svm import SVC
 <p>　　有50個人，每人有13照片，總共650張jpg圖檔，且檔案名稱有次序(一個人13張完才會換下一人)</p>
 <p>　　</p>
 <p>Random testing-labels generator algorithm:</p>
-<p>　　先造一個 0~12的ndarray當作母體，使用 np.random.choice 從中抽取兩個不重複的數字當作測試資料集的index。</p>
+<p>　　先造一個 0~12的ndarray當作母體，使用 <code>np.random.choice</code> 從中抽取兩個不重複的數字當作測試資料集的index。</p>
 <p>　　等一下讀檔時會依資料夾內檔案名稱的順序依序讀入，如果用一個計數器從0開始每讀一張就+1，</p>
 <p>　　則0~12對應到的就是第一個人的13張相片，如果index有被抽出就歸為測試資料，沒有就放入訓練資料。</p>
 <p>　　接著將母體的編號全部加上13，即下一個人所對應到的index，一直重複上述操作直到50人都抽完為止。</p>
@@ -56,7 +68,7 @@ testing_label = get_testing_label()
 <p>或著是在'\'再加一個反斜線讓其對下一個反斜線也採替代解釋 "\\"</p>
 <p>　　</p>
 <p>如果希望在Run time讓使用者輸入檔案存放路徑的話可採用以下寫法</p>
-<p>　　PATH = input("輸入訓練資料集所在的路徑位址: ") + "\\"</p>
+<p>　　　　<code>PATH = input("輸入訓練資料集所在的路徑位址: ") + "\\" </code></p>
 
 
 ```python
@@ -83,7 +95,7 @@ plt.show()
 <p>讓 file 依序為PATH路徑下的檔案名稱進行迴圈</p>
 <p>每次迴圈都將該名稱的圖檔用 mpimg.imread 讀入</p>
 <p>用cv2套件將其轉換成灰度圖，並透過立方內插法將每張圖片都調成相同的尺寸</p>
-<p>size:(213,311)的選擇詳見 Data Input/ImportingGraph_TestAndReport 資料夾下的說明</p>
+<p><em>size:(213,311)的選擇詳見 Data Input/ImportingGraph_TestAndReport 資料夾下的說明</em></p>
 <p>再來用ndarray.reshape(-1)轉換成一為陣列後併入適當的list內</p>
 <p>　　</p>
 <p>Face Database資料集下的檔案名稱都採用相同的形式，s01_01.jpg，這是第一個人的第一張圖檔</p>
@@ -136,7 +148,7 @@ print("ID:",y_test[0])
     
 
 <p>現在訓練與測試用的資料都準備好了，</p>
-<p>不過在使用辨識器進行學習前我們先用sklearn下的PCA套件進行維度的化簡，</p>
+<p>不過在使用辨識器進行學習前我們先用sklearn下的<a href="http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html">PCA</a>套件進行維度的化簡，</p>
 <p>不僅可以加快學習的速度，對辨識率的提升通常也有幫助。</p>
 <p>由於人臉的特徵較為複雜，且每次作為測試資料的圖片不盡相同，</p>
 <p>如果選擇降到較低的特定維度表現不太穩定，e.g.有時降到60維有很好的辨識率，但有時又會突然比鄰近的其他維度差上一截，</p>
@@ -149,7 +161,7 @@ newX_train = pca.fit_transform(X_train)
 newX_test = pca.transform(X_test)
 ```
 
-<p>再來使用SVC(Support Vector Classification)進行模型的訓練與辨識，核函數使用線性即可獲得不錯的成果了。</p>
+<p>再來使用<a href="http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html">SVC(Support Vector Classification)</a>進行模型的訓練與辨識，核函數使用線性即可獲得不錯的成果了。</p>
 <p>配適完後重新對訓練資料進行預測看我們對訓練資料的辨識率，同時更關注的是對未經訓練的測試資料能有多高的辨識率。</p>
 
 
@@ -166,7 +178,7 @@ print("測試資料辨識率:",np.mean(predict_test == y_test))
     測試資料辨識率: 0.89
     
 
-<p>這邊寫了一個小程式，想隨機看個幾張辨識成果的話輸入想display出來的張數則可。</p>
+<p>這邊寫了一個小程式，想隨機看個幾張辨識成果的話輸入打算display出來的張數則可。</p>
 
 
 ```python
@@ -217,9 +229,9 @@ for i in display_index:
     實際ID: 45
     
 
-<p>可以載入collections.Counter的模組幫我們統計一下預測結果中每個人出現了幾次，</p>
+<p>可以載入<a href="https://docs.python.org/2/library/collections.html#collections.Counter">collections.Counter</a>的模組幫我們統計一下預測結果中每個人出現了幾次，</p>
 <p>訓練資料集達到了100%的辨識率，與每個人為11次的結果相符</p>
-<p>而從測試資料的統計中我們可以發現，每個人才兩張照片但4號就被預測出了4次，這人可能長的挺厲害的。</p>
+<p>而從測試資料的統計中我們可以發現，每個人才兩張照片但31號就被預測出了4次，這人可能長的挺厲害的。</p>
 
 
 ```python
@@ -232,7 +244,7 @@ print(Counter(predict_test))
     Counter({31: 4, 1: 3, 9: 3, 10: 3, 27: 3, 38: 3, 36: 3, 48: 3, 2: 2, 4: 2, 45: 2, 6: 2, 7: 2, 11: 2, 12: 2, 13: 2, 14: 2, 15: 2, 16: 2, 17: 2, 20: 2, 21: 2, 22: 2, 23: 2, 24: 2, 25: 2, 26: 2, 28: 2, 29: 2, 30: 2, 32: 2, 33: 2, 34: 2, 35: 2, 37: 2, 40: 2, 42: 2, 43: 2, 44: 2, 47: 2, 49: 2, 50: 2, 3: 1, 5: 1, 8: 1, 18: 1, 19: 1, 39: 1, 46: 1})
     
 
-<p>如果想更深入的了解辨識器的識別情況，我們可以列出混淆矩陣(Confusion Matrix)來看每個人被辨識的結果，</p>
+<p>如果想更深入的了解辨識器的識別情況，我們可以列出<a href="https://blog.csdn.net/vesper305/article/details/44927047">混淆矩陣</a>(Confusion Matrix)來看每個人被辨識的結果，</p>
 <p>混淆矩陣的row name是圖片實際的類別(ID)，column name是預測的類別，而每一格的值是統計的次數。</p>
 <p>一樣在sklearn中就有現成的函數可以幫我們製作了，不過因為總共有50個類別，50by50的矩陣相當不易閱讀，</p>
 <p>這邊將其存入資料框(DataFrame)後以較精美的表格呈現。</p>
