@@ -21,8 +21,8 @@ from sklearn.decomposition import PCA
 from sklearn.svm import SVC
 ```
 
-<p>因為我們所有的人臉圖片都放在同一資料夾，</p>
-<p>如果全部拿去訓練的話很難檢驗模型是否有overfitting的情形，</p>
+<p>因為我們所有的人臉圖片都放在同一個資料夾，</p>
+<p>如果全都拿去訓練的話很難檢驗模型是否有overfitting的情形，</p>
 <p>所以必須寫一個程式去將檔案分成訓練資料和測試資料兩部分。</p>
 <p>　　</p>
 <p>Face Database:</p>
@@ -73,8 +73,7 @@ plt.axis('off')
 plt.show()
 ```
 
-
-![png](output_8_0.png)
+![png](https://raw.githubusercontent.com/NdhuAmMachineLearningTeam/Machine-Learning_Face-Recognition/master/Photo%20Gallery/Markdown%20Pitchers/output_8_0.png)
 
 
 <p>建立四個空的list</p>
@@ -130,7 +129,7 @@ print("ID:",y_test[0])
 ```
 
 
-![png](output_14_0.png)
+![png](https://raw.githubusercontent.com/NdhuAmMachineLearningTeam/Machine-Learning_Face-Recognition/master/Photo%20Gallery/Markdown%20Pitchers/output_14_0.png)
 
 
     ID: 1
@@ -192,7 +191,7 @@ for i in display_index:
     
 
 
-![png](output_20_1.png)
+![png](https://raw.githubusercontent.com/NdhuAmMachineLearningTeam/Machine-Learning_Face-Recognition/master/Photo%20Gallery/Markdown%20Pitchers/output_20_1.png)
 
 
     辨識結果: [27]
@@ -201,7 +200,7 @@ for i in display_index:
     
 
 
-![png](output_20_3.png)
+![png](https://raw.githubusercontent.com/NdhuAmMachineLearningTeam/Machine-Learning_Face-Recognition/master/Photo%20Gallery/Markdown%20Pitchers/output_20_3.png)
 
 
     辨識結果: [40]
@@ -210,7 +209,7 @@ for i in display_index:
     
 
 
-![png](output_20_5.png)
+![png](https://raw.githubusercontent.com/NdhuAmMachineLearningTeam/Machine-Learning_Face-Recognition/master/Photo%20Gallery/Markdown%20Pitchers/output_20_5.png)
 
 
     辨識結果: [45]
@@ -255,129 +254,7 @@ Confusion_Matrix.style.applymap(highlight)
 
 
 
-
-<style  type="text/css" >
-    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow0_col0 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow1_col1 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow2_col2 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow2_col30 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow3_col3 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow4_col4 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow4_col44 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow5_col5 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow6_col6 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow6_col8 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow7_col6 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow7_col7 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow8_col8 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow9_col9 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow10_col10 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow11_col11 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow12_col12 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow13_col13 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow14_col14 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow15_col15 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow16_col16 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow17_col17 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow17_col26 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow18_col18 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow18_col37 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow19_col19 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow20_col20 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow21_col21 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow22_col22 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow23_col23 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow24_col24 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow25_col25 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow26_col26 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow27_col27 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow28_col28 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow29_col29 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow30_col30 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow31_col31 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow32_col32 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow33_col33 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow34_col34 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow35_col35 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow36_col36 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow37_col37 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow38_col30 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow38_col38 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow39_col39 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow40_col0 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow40_col9 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow41_col41 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow42_col42 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow43_col43 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow44_col44 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow44_col47 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow45_col35 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow45_col45 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow46_col46 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow47_col47 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow48_col48 {
-            background-color:  yellow;
-        }    #T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13crow49_col49 {
-            background-color:  yellow;
-        }</style>  
+ 
 <table id="T_52ee8b54_7ed6_11e8_b579_28b2bd1bb13c" > 
 <thead>    <tr> 
         <th class="blank level0" ></th> 
@@ -3058,7 +2935,7 @@ for i in (0,18):
 ```
 
 
-![png](output_26_0.png)
+![png](https://raw.githubusercontent.com/NdhuAmMachineLearningTeam/Machine-Learning_Face-Recognition/master/Photo%20Gallery/Markdown%20Pitchers/output_26_0.png)
 
 
     辨識結果: [10]
@@ -3067,7 +2944,7 @@ for i in (0,18):
     
 
 
-![png](output_26_2.png)
+![png](https://raw.githubusercontent.com/NdhuAmMachineLearningTeam/Machine-Learning_Face-Recognition/master/Photo%20Gallery/Markdown%20Pitchers/output_26_2.png)
 
 
     辨識結果: [1]
@@ -3076,7 +2953,7 @@ for i in (0,18):
     
 
 
-![png](output_26_4.png)
+![png](https://raw.githubusercontent.com/NdhuAmMachineLearningTeam/Machine-Learning_Face-Recognition/master/Photo%20Gallery/Markdown%20Pitchers/output_26_4.png)
 
 
     辨識結果: [1]
@@ -3085,7 +2962,7 @@ for i in (0,18):
     
 
 
-![png](output_26_6.png)
+![png](https://raw.githubusercontent.com/NdhuAmMachineLearningTeam/Machine-Learning_Face-Recognition/master/Photo%20Gallery/Markdown%20Pitchers/output_26_6.png)
 
 
     辨識結果: [10]
@@ -3095,4 +2972,4 @@ for i in (0,18):
 
 <p>老實說這預測的結果其實還差蠻多的，男生都變成女生去了(汗)，</p>
 <p>但單看41號的這兩張圖片確實很難當作是同一個人，辨識器會學的不好也是有些道理的。</p>
-<p>不過這也代表我們還有著可以進步改善的空間，還是有許多的方法值得我們去嘗試的!!</p>
+<p>不過這也代表著仍有可以進步改善的空間，還是有許多的方法值得我們去嘗試的!!</p>
